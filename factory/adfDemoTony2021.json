@@ -1,0 +1,9 @@
+{
+	"name": "adfDemoTony2021",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4fd90444-74bc-48b4-a757-7a3a357f81cb",
+		"tenantId": "52592e7b-867d-43d8-81d8-2354862ce411"
+	}
+}

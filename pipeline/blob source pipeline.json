@@ -1,0 +1,70 @@
+{
+	"name": "blob source pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute SSIS package1",
+				"type": "ExecuteSSISPackage",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"packageLocation": {
+						"packagePath": "\\\\adfstorage0716.file.core.windows.net\\ssdtexecution\\Integration Services Project11-20210718214808\\BlobSource-tmp-20210719161610\\BlobSource.dtsx",
+						"type": "File",
+						"typeProperties": {
+							"accessCredential": {
+								"domain": "Azure",
+								"userName": "adfstorage0716",
+								"password": {
+									"type": "SecureString",
+									"value": "**********"
+								}
+							}
+						}
+					},
+					"connectVia": {
+						"referenceName": "SSISIR",
+						"type": "IntegrationRuntimeReference"
+					},
+					"loggingLevel": "Basic",
+					"packageConnectionManagers": {
+						"2021demo.database.windows.net.demo.dbadmin": {
+							"Password": {
+								"value": "Wff85!014"
+							}
+						},
+						"SSIS Connection Manager for Azure Storage": {
+							"AccountKey": {
+								"value": "GBWa9wAYJVpJrhDlhAGQ9FGxrvqHJ8L9q/V3tZifKv0xFmI1fJDpD0NFwoWou4wBgXadNHm6jeZgf6fSZzny9Q=="
+							}
+						}
+					},
+					"logLocation": {
+						"logPath": "\\\\adfstorage0716.file.core.windows.net\\azfileshare\\blobsource",
+						"type": "File",
+						"typeProperties": {
+							"accessCredential": {
+								"domain": "Azure",
+								"userName": "adfstorage0716",
+								"password": {
+									"type": "SecureString",
+									"value": "**********"
+								}
+							}
+						}
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-07-19T06:23:03Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
